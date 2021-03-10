@@ -1,9 +1,7 @@
 const getProduct = async (id) => {
   await new Promise((resolve) => setTimeout(() => resolve(), 800));
 
-  const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/products/${id}`,
-  );
+  const response = await fetch(`api/products/${id}`);
   return await response.json();
 };
 
